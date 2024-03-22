@@ -58,6 +58,7 @@ def move():
     update()
     ontimer(move, 100)
 
+#Se creó la función para mover la comida sin que se salga de los límites asi como detalles más específicos
 
 def move_food():
     """Move food one step at a time."""

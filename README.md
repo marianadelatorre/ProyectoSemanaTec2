@@ -1,3 +1,4 @@
+
 #Codigo original de snake.py Dentro de esta actividad se hicieron una serie de cambios importantes en la lógica de como funciona y se ve el juego. Algunos de estos cambios fueron:
 
 La comida podrá moverse al azar un paso a la vez y no deberá de salirse de la ventana

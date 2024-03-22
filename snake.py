@@ -8,12 +8,14 @@ Exercises
 4. Change the snake to respond to mouse clicks.
 """
 
+#Le agregue que importe choice 
 from random import randrange, choice
 
 from turtle import *
 
 from freegames import square, vector
 
+#aqui estan los colores que puede usar, sin incluir el rojo 
 colors = ['blue', 'green', 'yellow', 'orange', 'purple']
 snake_color = choice(colors)
 colors.remove(snake_color)
@@ -56,7 +58,7 @@ def move():
         snake.pop(0)
 
     clear()
-
+#Aqui se puso snake_color y food_color para que tome el color que se asigno arriba
     for body in snake:
         square(body.x, body.y, 9, snake_color)
 
@@ -69,14 +71,14 @@ def move_food():
     """Move food one step at a time."""
     global food_direction  # Utilizamos la dirección de la comida globalmente
 
-    next_food_pos = food + food_direction  # Calculamos la próxima posición de la comida
+    next_food_pos = food + food_direction 
 
-    # Verificamos si la próxima posición está dentro de los límites
+    
     if -200 < next_food_pos.x < 190 and -200 < next_food_pos.y < 190:
         food.x = next_food_pos.x
         food.y = next_food_pos.y
     else:
-        # Si la próxima posición está fuera de los límites, cambiamos la dirección aleatoriamente
+        
         food_direction = vector(randrange(-1, 2) * 10, randrange(-1, 2) * 10)
 
     ontimer(move_food, 1000)  
